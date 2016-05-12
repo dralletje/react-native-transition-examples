@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-import { Scene, SceneProp } from 'react-native-transition'
+import { Scene, SceneView } from 'react-native-transition'
 
 class Scene1 extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class Scene1 extends React.Component {
               backgroundColor: '#F5FCFF',
             }}
           >
-            <SceneProp
+            <SceneView
               sceneKey="text1"
               style={{
                 paddingBottom: 25,
@@ -33,8 +33,8 @@ class Scene1 extends React.Component {
                 Welcome to React Native!{'\n'}
                 .......asdjsdafohiaewrhoiearofuhaewoifh
               </Text>
-            </SceneProp>
-            <SceneProp
+            </SceneView>
+            <SceneView
               sceneKey="text2"
               style={{
                 marginBottom: 5,
@@ -49,8 +49,8 @@ class Scene1 extends React.Component {
               >
                 To get started, edit index.ios.js
               </Text>
-            </SceneProp>
-            <SceneProp
+            </SceneView>
+            <SceneView
               sceneKey="text3"
               style={{
                 marginBottom: 5,
@@ -66,8 +66,8 @@ class Scene1 extends React.Component {
                 Press Cmd+R to reload,{'\n'}
                 Cmd+D or shake for dev menu
               </Text>
-            </SceneProp>
-            <SceneProp
+            </SceneView>
+            <SceneView
               sceneKey="text4"
               style={{
                 marginBottom: 5,
@@ -83,7 +83,7 @@ class Scene1 extends React.Component {
                 :D :D :D :D :D
                 Cmd+D or shake for dev menu
               </Text>
-            </SceneProp>
+            </SceneView>
           </View>
         </Scene>
       </TouchableOpacity>

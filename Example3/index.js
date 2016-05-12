@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { SceneContainer, transitions } from 'react-native-transition'
-let { linear, slideIn, slideOut } = transitions
+import { SceneContainer } from 'react-native-transition'
+import { linear, slideIn, slideOut } from 'react-native-transition/source/animations'
 
 import { withState } from 'recompose'
 

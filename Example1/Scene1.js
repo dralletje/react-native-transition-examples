@@ -1,20 +1,31 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-import { Scene, SceneProp } from 'react-native-transition'
+import { Scene, SceneView } from 'react-native-transition'
 
 class Scene1 extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      time: 1,
+      showText: false,
     }
-    setTimeout(() => {
-      this.setState({ time: 5 })
-    }, 1000)
   }
+
+  componentDidMount() {
+    let timeout = setTimeout(() => {
+      this.setState({ showText: true })
+    }, 1000)
+    this.unsubscribe = () => {
+      clearTimeout(timeout)
+    }
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe()
+  }
+
   render() {
-    let { time } = this.state
+    let { showText } = this.state
     return (
       <TouchableOpacity style={{ flex: 1 }} onPress={this.props.onPress}>
         <Scene>
@@ -26,7 +37,7 @@ class Scene1 extends React.Component {
               backgroundColor: '#F5FCFF',
             }}
           >
-            <SceneProp
+            <SceneView
               sceneKey="text3"
               style={{
                 marginBottom: 5,
@@ -42,8 +53,8 @@ class Scene1 extends React.Component {
                 Press Cmd+R to reload,{'\n'}
                 Cmd+D or shake for dev menu
               </Text>
-            </SceneProp>
-            <SceneProp
+            </SceneView>
+            <SceneView
               sceneKey="text1"
               style={{
                 margin: 10,
@@ -58,12 +69,10 @@ class Scene1 extends React.Component {
                 }}
               >
                 Welcome to React Native!{'\n'}
-                {
-                  time === 1 ? '' : '.......asdjsdafohiaewrhoiearofuhaeasdassdasdasdasdasdasdasdasdasdadsdwoifh'
-                }
+                { showText && '.......asdjsdafohiaewrhoiearofuhaeasdassdasdasdasdasdasdasdasdasdadsdwoifh' }
               </Text>
-            </SceneProp>
-            <SceneProp
+            </SceneView>
+            <SceneView
               sceneKey="text2"
               style={{
                 marginBottom: 5,
@@ -78,7 +87,7 @@ class Scene1 extends React.Component {
               >
                 To get started, edit index.ios.js
               </Text>
-            </SceneProp>
+            </SceneView>
           </View>
         </Scene>
       </TouchableOpacity>
