@@ -23,6 +23,7 @@ class Scene1 extends React.Component {
               style={{
                 flex: 1,
                 backgroundColor: 'blue',
+                borderRadius: 0,
               }}
             />
           </View>

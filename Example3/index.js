@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SceneContainer, transitions } from 'react-native-transition'
-let { linear, style } = transitions
+let { linear, style, compose } = transitions
 
 import { withState } from 'recompose'
 
@@ -15,7 +15,10 @@ let Example2 = withState('page', 'setPage', 'scene1')(({ page, setPage }) => {
   return (
     <SceneContainer
       transitions={{
-        img1: style,
+        img1: compose([
+          style(['backgroundColor', 'borderRadius']),
+          linear(),
+        ]),
       }}
     >
       <Page

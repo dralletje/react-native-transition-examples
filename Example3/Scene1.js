@@ -29,6 +29,7 @@ let Scene1 = ({ onPress }) => {
             style={{
               ...style,
               backgroundColor: 'red',
+              borderRadius: 75,
             }}
           />
         </View>
