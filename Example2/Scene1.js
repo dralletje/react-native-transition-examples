@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-import { Scene, SceneView } from 'react-native-transition'
+import { Scene } from 'react-native-transition'
 
 let Scene1 = ({ onPress }) => {
   let style = {
@@ -24,28 +24,28 @@ let Scene1 = ({ onPress }) => {
             flexWrap: 'wrap',
           }}
         >
-          <SceneView
+          <View
             sceneKey="img1"
             style={{
               ...style,
               backgroundColor: 'blue',
             }}
           />
-          <SceneView
+          <View
             sceneKey="img2"
             style={{
               ...style,
               backgroundColor: 'red',
             }}
           />
-          <SceneView
+          <View
             sceneKey="img3"
             style={{
               ...style,
               backgroundColor: 'green',
             }}
           />
-          <SceneView
+          <View
             sceneKey="img4"
             style={{
               ...style,

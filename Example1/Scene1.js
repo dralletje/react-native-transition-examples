@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-import { Scene, SceneView } from 'react-native-transition'
+import { Scene } from 'react-native-transition'
 
 class Scene1 extends React.Component {
   constructor(props) {
@@ -11,18 +11,18 @@ class Scene1 extends React.Component {
     }
   }
 
-  componentDidMount() {
-    let timeout = setTimeout(() => {
-      this.setState({ showText: true })
-    }, 1000)
-    this.unsubscribe = () => {
-      clearTimeout(timeout)
-    }
-  }
-
-  componentWillUnmount() {
-    this.unsubscribe()
-  }
+  // componentDidMount() {
+  //   let timeout = setTimeout(() => {
+  //     this.setState({ showText: true })
+  //   }, 1000)
+  //   this.unsubscribe = () => {
+  //     clearTimeout(timeout)
+  //   }
+  // }
+  //
+  // componentWillUnmount() {
+  //   this.unsubscribe()
+  // }
 
   render() {
     let { showText } = this.state
@@ -37,7 +37,7 @@ class Scene1 extends React.Component {
               backgroundColor: '#F5FCFF',
             }}
           >
-            <SceneView
+            <View
               sceneKey="text3"
               style={{
                 marginBottom: 5,
@@ -53,8 +53,8 @@ class Scene1 extends React.Component {
                 Press Cmd+R to reload,{'\n'}
                 Cmd+D or shake for dev menu
               </Text>
-            </SceneView>
-            <SceneView
+            </View>
+            <View
               sceneKey="text1"
               style={{
                 margin: 10,
@@ -71,8 +71,8 @@ class Scene1 extends React.Component {
                 Welcome to React Native!{'\n'}
                 { showText && '.......asdjsdafohiaewrhoiearofuhaeasdassdasdasdasdasdasdasdasdasdadsdwoifh' }
               </Text>
-            </SceneView>
-            <SceneView
+            </View>
+            <View
               sceneKey="text2"
               style={{
                 marginBottom: 5,
@@ -87,7 +87,7 @@ class Scene1 extends React.Component {
               >
                 To get started, edit index.ios.js
               </Text>
-            </SceneView>
+            </View>
           </View>
         </Scene>
       </TouchableOpacity>

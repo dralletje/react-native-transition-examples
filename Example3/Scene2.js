@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-import { Scene, SceneView } from 'react-native-transition'
+import { Scene } from 'react-native-transition'
 
 class Scene1 extends React.Component {
   render() {
@@ -18,7 +18,7 @@ class Scene1 extends React.Component {
               flexWrap: 'wrap',
             }}
           >
-            <SceneView
+            <View
               sceneKey="img1"
               style={{
                 flex: 1,
