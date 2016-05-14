@@ -24,8 +24,19 @@ class Scene1 extends React.Component {
                 flex: 1,
                 backgroundColor: 'blue',
                 borderRadius: 0,
+                margin: 20,
               }}
-            />
+            >
+              <Text
+                style={{
+                  fontSize: 100,
+                  color: 'white',
+                  backgroundColor: 'transparent',
+                  margin: 100,
+                }}
+                sceneKey="text1"
+              >Hello</Text>
+            </View>
           </View>
         </Scene>
       </TouchableOpacity>

@@ -19,6 +19,7 @@ let Example2 = withState('page', 'setPage', 'scene1')(({ page, setPage }) => {
           style(['backgroundColor', 'borderRadius']),
           linear(),
         ]),
+        text1: style(['fontSize', 'color', 'margin']),
       }}
     >
       <Page

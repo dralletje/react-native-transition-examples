@@ -28,10 +28,20 @@ let Scene1 = ({ onPress }) => {
             sceneKey="img1"
             style={{
               ...style,
-              backgroundColor: 'red',
+              backgroundColor: 'black',
               borderRadius: 75,
             }}
-          />
+          >
+            <Text
+              style={{
+                fontSize: 30,
+                color: 'red',
+                backgroundColor: 'transparent',
+                margin: 20,
+              }}
+              sceneKey="text1"
+            >Hello</Text>
+          </View>
         </View>
       </Scene>
     </TouchableOpacity>
